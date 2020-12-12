@@ -19,6 +19,7 @@ import { Dashboard1Component } from './views/dashboards/dashboard1/dashboard1.co
 // main layout
 import { NavigationModule } from './main-layout/navigation/navigation.module';
 import { CoursesComponent } from './views/courses/courses/courses.component';
+import { CreateCourseComponent } from './views/courses/create-course/create-course.component';
 
 const routes: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: 'dashboards/v1' },
@@ -30,6 +31,7 @@ const routes: Route[] = [
   { path: 'courses', children:
     [
       { path: 'courses', component: CoursesComponent },
+      { path: 'create-course', component: CreateCourseComponent },
     ]
   },
   { path: 'tables', children:
