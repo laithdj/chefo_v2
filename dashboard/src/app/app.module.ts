@@ -18,8 +18,7 @@ import { Dashboard1Component } from './views/dashboards/dashboard1/dashboard1.co
 
 // main layout
 import { NavigationModule } from './main-layout/navigation/navigation.module';
-import { CoursesComponent } from './views/courses/courses/courses.component';
-import { CreateCourseComponent } from './views/courses/create-course/create-course.component';
+
 
 const routes: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: 'dashboards/v1' },
@@ -28,12 +27,20 @@ const routes: Route[] = [
       { path: 'v1', component: Dashboard1Component },
     ]
   },
+  { path: 'courses', loadChildren: () => import('./views/courses/courses.module').then(m => m.CoursesModule)},
+/*
   { path: 'courses', children:
     [
       { path: 'courses', component: CoursesComponent },
-      { path: 'create-course', component: CreateCourseComponent },
+      { path: 'create-course', component: CreateCourseComponent , children:
+      [
+        { path: 'step-1', component: Step1Component },
+        { path: 'step-2', component: Step2Component },
+        { path: 'step-3', component: Step3Component },
+      ]
+    },
     ]
-  },
+  },*/
   { path: 'tables', children:
     [
       { path: 'table1', component: BasicTableComponent },

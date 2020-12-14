@@ -1,14 +1,14 @@
-<p>create-course works!</p>
+
 <!-- Horizontal Steppers -->
 <div class="row">
     <div class="col-md-12">
-  
+
       <!-- Stepers Wrapper -->
       <ul class="stepper stepper-horizontal">
   
         <!-- First Step -->
         <li class="completed">
-          <a href="#!">
+          <a >
             <span class="circle">1</span>
             <span class="label">First step</span>
           </a>
@@ -16,16 +16,16 @@
   
         <!-- Second Step -->
         <li class="active">
-          <a href="#!">
+          <a >
             <span class="circle">2</span>
             <span class="label">Second step</span>
           </a>
         </li>
   
         <!-- Third Step -->
-        <li class="warning">
-          <a href="#!">
-            <span class="circle"><mdb-icon fas icon="exclamation"></mdb-icon></span>
+        <li class="active">
+          <a routerLink="../create-course/step-3">
+            <span class="circle">3</span>
             <span class="label">Third step</span>
           </a>
         </li>
@@ -35,4 +35,6 @@
   
     </div>
   </div>
+  <router-outlet></router-outlet>
+
   <!-- /.Horizontal Steppers -->
