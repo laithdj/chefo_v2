@@ -1,9 +1,12 @@
 <!-- Default form register -->
 <form class="text-center border border-light p-5">
     <p class="h4 mb-4">Upload Course</p>
-    <input type="text" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Video Title">
-    <input type="text" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Upload Video">
-    <button mdbBtn color="info" block="true" class="my-4 w-25" type="submit">+ Add</button>
+    <div *ngFor="let video of videos">
+      <input type="text" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Video Title">
+      <input type="text" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Upload Video">
+      <hr>
+    </div>
+    <button mdbBtn color="info" block="true" class="my-4 w-25" type="submit" (click)="addRow()">+ Add</button>
 <br><br>
 <br><br>
    <div class="row">

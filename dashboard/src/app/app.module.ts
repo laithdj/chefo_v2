@@ -18,6 +18,7 @@ import { Dashboard1Component } from './views/dashboards/dashboard1/dashboard1.co
 
 // main layout
 import { NavigationModule } from './main-layout/navigation/navigation.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 const routes: Route[] = [
@@ -73,10 +74,11 @@ const routes: Route[] = [
     SharedModule,
     ViewsModule,
     ErrorModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
 })
