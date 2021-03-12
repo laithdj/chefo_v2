@@ -5,6 +5,7 @@ export class Course {
     price: string;
     category: string;
     courseCategory: string[];
+    image:string;
     students: number;
     rating: number;
 }
