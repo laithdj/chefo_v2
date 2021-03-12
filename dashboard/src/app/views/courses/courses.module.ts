@@ -10,10 +10,11 @@ import { Step2Component } from './create-course/step2/step2.component';
 import { Step3Component } from './create-course/step3/step3.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { EditCourseComponent } from './edit-course/edit-course.component';
 
 
 @NgModule({
-  declarations: [CoursesComponent, CreateCourseComponent, Step1Component, Step2Component, Step3Component],
+  declarations: [CoursesComponent, CreateCourseComponent, Step1Component, Step2Component, Step3Component, EditCourseComponent],
   imports: [
     CommonModule,
     FormsModule,

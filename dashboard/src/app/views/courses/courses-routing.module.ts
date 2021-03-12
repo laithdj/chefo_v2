@@ -5,9 +5,11 @@ import { Step1Component } from './create-course/step1/step1.component';
 import { Step2Component } from './create-course/step2/step2.component';
 import { Step3Component } from './create-course/step3/step3.component';
 import { CoursesComponent } from './courses/courses.component';
+import { EditCourseComponent } from './edit-course/edit-course.component';
 
 const routes: Routes = [
   { path: '', component: CoursesComponent },
+  { path: 'edit-course', component: EditCourseComponent },
   { path: 'create-course', component: CreateCourseComponent , children:
   [
     { path: '', component: Step1Component },
