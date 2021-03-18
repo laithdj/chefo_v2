@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Search } from '../../main/main/main.component';
 import { MainService } from '../../shared/main.service';
-import { Course } from '../../shared/models/courses';
+import { Course } from '../../models/Course';
 
 @Component({
   selector: 'app-results',
@@ -33,8 +33,8 @@ export class ResultsComponent implements OnInit {
   getCourses() {
     this.mainservice.getCourses().subscribe(data => {
       if (data) {
-        this.courses = data;
-        this.courses.filter(c => c.category === this.category);
+        this.courses = data.filter(c => c.category === this.category);;
+    //    this.courses.filter(c => c.category === this.category);
         //  this.courseLoaded = false;
       }
       console.log(this.courses);

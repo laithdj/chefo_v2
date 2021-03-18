@@ -5,7 +5,7 @@ import { Search } from '../main/main/main.component';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
-import { Course } from './models/courses';
+import { Course } from '../models/Course';
 
 @Injectable({
   providedIn: 'root'

@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 const appRoutes: Routes = [
   { path: '', loadChildren: () => import('./main/main.module').then(m => m.MainModule)},
   { path: 'details/:id', loadChildren: () => import('./details/details.module').then(m => m.DetailsModule)},
+  { path: 'video-player/:id', loadChildren: () => import('./video-player/video-player.module').then(m => m.VideoPlayerModule)},
+
   { path: 'results', loadChildren: () => import('./results/results.module').then(m => m.ResultsModule)},
   { path: 'results/:category', loadChildren: () => import('./results/results.module').then(m => m.ResultsModule)},
 

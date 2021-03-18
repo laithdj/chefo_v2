@@ -56,7 +56,7 @@ body {
   
   @media (min-width: 1200px) {
     .navbar, .page-footer, main {
-      padding-left: 270px
+      /*padding-left: 270px*/
     }
   }
   

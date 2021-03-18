@@ -25,11 +25,10 @@
       </mdb-card>
     </div>
   -->
-  <div class="col-md-2" *ngFor="let course of courses;let i = index">
+  <div class="col-md-3" *ngFor="let course of courses;let i = index">
     <mdb-card cascade="true" narrower="true">
       <div class="view view-cascade overlay waves-light" mdbWavesEffect>
-        <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg"></mdb-card-img>
-
+        <mdb-card-img src={{courses[i].image}}></mdb-card-img>
       </div>
       <mdb-card-body cascade="true" class="text-center">
         <h5 class="orange-text">
@@ -39,8 +38,8 @@
           {{courses[i].description}}
         </mdb-card-text>
         <h5 class="orange-text">
-          {{courses[i].price}}</h5>
-        <a mdbBtn color="unique" class="waves-light orange darken-4" mdbWavesEffect [routerLink]="['../details/' , '5fc98448d011e000043a1441']">Enrol</a>
+         ${{courses[i].price}}</h5>
+        <a mdbBtn color="unique" class="waves-light orange darken-4" mdbWavesEffect [routerLink]="['../../details/' , courses[i].id]">Enrol</a>
       </mdb-card-body>
     </mdb-card>
   </div>
